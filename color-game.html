@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="color-game.css">
+</head>
+
+<body>
+  <div id="app">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Logo</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid text-center">
+      <div class="row content">
+       <!--  <div class="col-md-2 sidenav">
+          <p><a href="#"> <span v-on:click="setLevel(3)">Easy</span></a></p>
+          <p><a href="#"><span v-on:click="setLevel(4)">Mediun</span></a></p>
+          <p><a href="#"> <span v-on:click="setLevel(6)">Hard</span></a></p>
+        </div> -->
+        <div style="margin-top: 100px; margin-left:100px; " class="col-md-8 text-left">
+          <div style="margin-bottom: 20px;" class="row">
+            <div class="col-md-4">
+              High Score: <span class="label label-success">{{highScore}}</span>
+            </div>
+            <div class="col-md-4">
+              Score: <span class="label label-primary">{{score}}</span>
+            </div>
+          </div>
+          <div style="margin-bottom: 20px;" class="row">
+            <div class="col-md-4" >
+              Time: <span v-show="seconds">{{seconds}}</span>
+            </div>
+            <div class="col-md-8" v-on:click="startTimer()">
+              <button class="btn btn-default btn-xs">
+                <span v-if="showButton" v-on:click="startTimer">Start Game</span>
+                <span v-else v-on:click="clearTimer">Restart Game</span>
+              </button>
+            </div>
+          </div>
+          <table class="table table-bordered">
+            <tbody>
+              <tr v-for="i in level">
+                <td v-for="j in level" class="square square-blue" v-on:click="calculateScore(i,j)"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div  class="row col-md-3">
+          	<div class="col-sm-4"><button class="btn btn-success" v-on:click="setLevel(3)">Easy</button> </div>
+          	<div class="col-sm-4"><button class="btn btn-warning" v-on:click="setLevel(4)">Medium</button></div>
+          	<div class="col-sm-4"><button class="btn btn-danger" v-on:click="setLevel(6)">Hard</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="colorGame.js">
+  </script>
+</body>
+</html>
