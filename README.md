@@ -15,7 +15,7 @@ A color position finding game using HTML, CSS, Vue.js with the following feature
 on click of OK on alert, game should be restarted.
 10. There should be a button to restart the game.
 
-A Easy: 3x3 game image
+Easy: 3x3 game image
 
 ![alt text](/images/color-game.jpg)
 
