@@ -1,3 +1,4 @@
+#ColorDetect
 
 A color position finding game using HTML, CSS, Vue.js with the following features:
 1. A board of NxN with all cells coloured light grey.
